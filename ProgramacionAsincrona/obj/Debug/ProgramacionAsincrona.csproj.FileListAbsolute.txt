@@ -1,0 +1,14 @@
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\ProgramacionAsincrona.exe.config
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\ProgramacionAsincrona.exe
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\ProgramacionAsincrona.pdb
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\obj\Debug\ProgramacionAsincrona.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\obj\Debug\ProgramacionAsincrona.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\obj\Debug\ProgramacionAsincrona.Form1.resources
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\obj\Debug\ProgramacionAsincrona.Properties.Resources.resources
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\obj\Debug\ProgramacionAsincrona.csproj.GenerateResource.cache
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\obj\Debug\ProgramacionAsincrona.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\obj\Debug\ProgramacionAsincrona.exe
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\obj\Debug\ProgramacionAsincrona.pdb
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\obj\Debug\ProgramacionAsincrona.csproj.CopyComplete
