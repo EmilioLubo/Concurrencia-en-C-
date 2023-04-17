@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -38,26 +39,34 @@ namespace ProgramacionAsincrona
             _cancellationTokenSource = new CancellationTokenSource();
             _cancellationTokenSource.CancelAfter(TimeSpan.FromSeconds(30));
             loadingGif.Enabled = true;
-            var reportarProgreso = new Progress<int>(ReportarProgresoTarjetas);
 
-            try
-            {
-                var r = await Task.Run(async () =>
-                {
-                    await Task.Delay(5000);
-                    return 7;
-                }).WithCancellation(_cancellationTokenSource.Token);
+            var nombres = new List<string>() { "Felipe", "Claudio" };
 
-                Console.WriteLine(r);
-            }
-            catch(Exception ex)
+            foreach (var n in nombres)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine(n);
             }
-            finally
-            {
-                _cancellationTokenSource.Dispose();
-            }
+
+            //var reportarProgreso = new Progress<int>(ReportarProgresoTarjetas);
+
+            //try
+            //{
+            //    var r = await Task.Run(async () =>
+            //    {
+            //        await Task.Delay(5000);
+            //        return 7;
+            //    }).WithCancellation(_cancellationTokenSource.Token);
+
+            //    Console.WriteLine(r);
+            //}
+            //catch(Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //finally
+            //{
+            //    _cancellationTokenSource.Dispose();
+            //}
 
             //var nuevaT = EvaluarValor(txtInput.Text);
 
@@ -154,12 +163,61 @@ namespace ProgramacionAsincrona
             //    loadingGif.Enabled = false;
             //    MessageBox.Show("La operación ha sido cancelada", ex.Message);
             //}
+            //try
+            //{
+            //    await foreach (var n in GenerarNombres(_cancellationTokenSource.Token))
+            //    {
+            //        Console.WriteLine(n);
+            //        //break;
+            //    }
+            //}
+            //catch (TaskCanceledException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            //finally
+            //{
+            //    _cancellationTokenSource?.Dispose();
+            //}
+
+            var nombresI = GenerarNombres();
+            await ProcesarNombres(nombresI);
+            Console.WriteLine("Fin");
 
             loadingGif.Enabled = false;
             MessageBox.Show($"Operación finalizada en {sw.ElapsedMilliseconds / 1000.0} segundos.");
 
             pgProcesamiento.Value = 0;
         }
+
+        private async Task ProcesarNombres(IAsyncEnumerable<string> nombresI)
+        {
+            try
+            {
+                await foreach(var n in nombresI.WithCancellation(_cancellationTokenSource.Token))
+                {
+                    Console.WriteLine(n);
+                }
+            }
+            catch(TaskCanceledException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                _cancellationTokenSource?.Dispose();
+            }
+        }
+
+        private async IAsyncEnumerable<string> GenerarNombres([EnumeratorCancellation] CancellationToken ct = default)
+        {
+            yield return "Emilio";
+            await Task.Delay(3000, ct);
+            yield return "Claudia";
+            await Task.Delay(3000, ct);
+            yield return "Pedro";
+        }
+
         public Task EvaluarValor(string v)
         {
             var tcs = new TaskCompletionSource<object>(TaskCreationOptions.RunContinuationsAsynchronously);

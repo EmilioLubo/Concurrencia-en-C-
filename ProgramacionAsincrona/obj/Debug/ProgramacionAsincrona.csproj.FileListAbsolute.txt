@@ -12,3 +12,9 @@ C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\obj\Debug\Progr
 C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\obj\Debug\ProgramacionAsincrona.csproj.CopyComplete
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Usuario\source\repos\Concurrencia\ProgramacionAsincrona\bin\Debug\System.Threading.Tasks.Extensions.xml
