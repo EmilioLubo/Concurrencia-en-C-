@@ -33,6 +33,8 @@
             this.loadingGif = new System.Windows.Forms.PictureBox();
             this.txtInput = new System.Windows.Forms.TextBox();
             this.Nombre = new System.Windows.Forms.Label();
+            this.pgProcesamiento = new System.Windows.Forms.ProgressBar();
+            this.btnCcl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.loadingGif)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,12 +76,31 @@
             this.Nombre.TabIndex = 3;
             this.Nombre.Text = "Nombre:";
             // 
+            // pgProcesamiento
+            // 
+            this.pgProcesamiento.Location = new System.Drawing.Point(23, 35);
+            this.pgProcesamiento.Name = "pgProcesamiento";
+            this.pgProcesamiento.Size = new System.Drawing.Size(221, 30);
+            this.pgProcesamiento.TabIndex = 4;
+            // 
+            // btnCcl
+            // 
+            this.btnCcl.Location = new System.Drawing.Point(93, 93);
+            this.btnCcl.Name = "btnCcl";
+            this.btnCcl.Size = new System.Drawing.Size(75, 23);
+            this.btnCcl.TabIndex = 5;
+            this.btnCcl.Text = "Cancelar";
+            this.btnCcl.UseVisualStyleBackColor = true;
+            this.btnCcl.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCcl);
+            this.Controls.Add(this.pgProcesamiento);
             this.Controls.Add(this.Nombre);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.loadingGif);
@@ -99,6 +120,8 @@
         private System.Windows.Forms.PictureBox loadingGif;
         private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.Label Nombre;
+        private System.Windows.Forms.ProgressBar pgProcesamiento;
+        private System.Windows.Forms.Button btnCcl;
     }
 }
 
